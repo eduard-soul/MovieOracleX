@@ -34,7 +34,7 @@ async def fetch(client: aiohttp.ClientSession, url: str) -> HtmlElement:
 # Fetch users from a specific page of a movie's members
 async def get_users_from_page(client: aiohttp.ClientSession, movie_slug: str, page: int, sem: asyncio.Semaphore) -> list[str]:
     async with sem:
-        url = BASE_URL + f"film/{movie_slug}/members/page/{page}/"
+        url = BASE_URL + f"film/{movie_slug}/members/page/3/"
         try:
             doc = await fetch(client, url)
             log.debug(f"Fetched page {page} for movie '{movie_slug}'")
