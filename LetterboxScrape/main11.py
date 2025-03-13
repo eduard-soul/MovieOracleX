@@ -15,6 +15,7 @@ ALLTIME_POPULAR_URL = BASE_URL + "members/popular/this/all-time/page/{page}/"
 MONTHLY_POPULAR_URL = BASE_URL + "members/popular/this/month/{page}"
 YEARLY_POPULAR_URL = BASE_URL + "members/popular/this/year/{page}/"
 WEEKLY_POPULAR_URL = BASE_URL + "members/popular/this/week/page/{page}/"
+PAGE = 5
 
 # Logging setup
 logging.basicConfig(
