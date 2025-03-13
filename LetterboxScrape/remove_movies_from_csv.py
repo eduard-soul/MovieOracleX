@@ -1,7 +1,7 @@
 import csv
 
 # Define file names
-csv_file = './unique_film_ids_full.csv'          # Input CSV file
+csv_file = './unique_film_ids.csv'          # Input CSV file
 remove_file = './less_25_film_ids.csv'  # File with movie names to remove
 output_file = 'filtered_movies.csv'   # Output CSV file
 
