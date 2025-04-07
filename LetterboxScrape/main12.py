@@ -15,7 +15,7 @@ ALLTIME_POPULAR_URL = BASE_URL + "members/popular/this/all-time/page/{page}/"
 MONTHLY_POPULAR_URL = BASE_URL + "members/popular/this/month/{page}"
 YEARLY_POPULAR_URL = BASE_URL + "members/popular/this/year/{page}/"
 WEEKLY_POPULAR_URL = BASE_URL + "members/popular/this/week/page/{page}/"
-PAGE = 102
+PAGE = 164
 
 # Logging setup
 logging.basicConfig(
@@ -33,7 +33,7 @@ async def fetch(client: aiohttp.ClientSession, url: str) -> HtmlElement:
 
 async def get_users_from_page(client: aiohttp.ClientSession, movie_slug: str, page: int, sem: asyncio.Semaphore) -> list[str]:
     async with sem:
-        url = BASE_URL + f"film/{movie_slug}/members/page/{page}/"  # Modified to use dynamic page
+        url = BASE_URL + f"film/{movie_slug}/members/by/date-earliest/page/{page}/"  # Modified to use dynamic page
         try:
             doc = await fetch(client, url)
             log.debug(f"Fetched page {page} for movie '{movie_slug}'")
